@@ -41,7 +41,7 @@ export class Game extends React.Component {
     })
     resetGame = () => this.setState(Game.initialState);
     selectNumber = (clickedNumber: number) => {
-        if (!_.includes(this.state.selectedNumbers, clickedNumber)) {
+        if (!_.includes(this.state.usedNumbers, clickedNumber)) {
             this.setState((prevState: BaseProps) => ({
                 answerIsCorrect: null,
                 selectedNumbers: prevState.selectedNumbers.concat(clickedNumber)
