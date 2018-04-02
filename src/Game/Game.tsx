@@ -63,7 +63,7 @@ export class Game extends React.Component {
     }
     acceptAnswer = () => {
         this.setState((prevState: BaseProps) => ({
-            usedNumbers: _.concat(prevState.usedNumbers, prevState.selectedNumbers),
+            usedNumbers: _.concat(this.state.usedNumbers, prevState.selectedNumbers),
             selectedNumbers: [],
             answerIsCorrect: null,
             randomNumberOfStars: Game.randomNumber()
